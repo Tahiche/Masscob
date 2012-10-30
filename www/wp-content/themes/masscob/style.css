@@ -806,7 +806,7 @@ div.aligncenter {
 	border:1px solid #dbdbdb;
 }
 .img_press {
-	float:left; margin-right:60px; margin-bottom:50px; height:206px; /* augmenter le height si necessaire */
+	float:left; margin-right:40px; margin-bottom:50px; height:206px; /* augmenter le height si necessaire */
 	width: 125px;
 }
 .pays {
@@ -1063,12 +1063,11 @@ a.cloclose{
 
 /************************* gallery overrides ************************/
 
-#gallery-1 {
-				margin: auto;
-				
-margin-top: -28px;
+.gallery {
+margin: auto;				
+margin-top: 0px !important;
 			}
-			#gallery-1 .gallery-item {
+			.gallery .gallery-item {
 				float: left;
 				margin-top: 0px !important;
 				margin-bottom: 0px !important;
@@ -1077,15 +1076,22 @@ margin-top: -28px;
 				margin: 1 !important;
 				display:inline !important;
 			}
-			#gallery-1 .gallery-item:hover {
+			.gallery .gallery-item:hover {
 				background-color:#333;
 			}
-			#gallery-1 img {
+			.gallery img {
 				border: none !important;
 			}
-			#gallery-1 .gallery-caption {
+			.gallery .gallery-caption {
 				margin-left: 0;
 			}
-			
+
+#press-gal{
+	font-size:12px;
+	margin-left:100px !important;
+	}
+#press-gal .img_press img{
+	border:#DBDBDB 1px solid;
+	}	
 #post-9{
 	font-size:12px;}

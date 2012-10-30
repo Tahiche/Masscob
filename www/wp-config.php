@@ -1,85 +1,91 @@
 <?php
 /** 
- * La configuration de base de votre WordPress.
+ * Configuración básica de WordPress.
  *
- * Ce fichier contient les réglages de configuration suivants : réglages MySQL,
- * préfixe de table, clefs secrètes, langue utilisée, et ABSPATH.
- * Vous pouvez en savoir plus à leur sujet en allant sur 
- * {@link http://codex.wordpress.org/Editing_wp-config.php Modifier
- * wp-config.php} (en anglais). Vous devez obtenir les codes MySQL de votre 
- * hébergeur.
+ * Este archivo contiene las siguientes configuraciones: ajustes de MySQL, prefijo de tablas,
+ * claves secretas, idioma de WordPress y ABSPATH. Para obtener más información,
+ * visita la página del Codex{@link http://codex.wordpress.org/Editing_wp-config.php Editing
+ * wp-config.php} . Los ajustes de MySQL te los proporcionará tu proveedor de alojamiento web.
  *
- * Ce fichier est utilisé par le script de création de wp-config.php pendant
- * le processus d'installation. Vous n'avez pas à utiliser le site web, vous
- * pouvez simplement renommer ce fichier en "wp-config.php" et remplir les
- * valeurs.
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
  *
  * @package WordPress
  */
 
-// ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
-/** Le nom de la base de données de WordPress. */
-define('DB_NAME', 'masscob');
+// ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
+/** El nombre de tu base de datos de WordPress */
+define('DB_NAME', 'msscobwp');
 
-/** Utilisateur de la base de données MySQL. */
-define('DB_USER', 'masscob');
+/** Tu nombre de usuario de MySQL */
+define('DB_USER', 'masscob2012');
 
-/** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', 'masscob01');
+/** Tu contraseña de MySQL */
+define('DB_PASSWORD', 'msscb2012masscob');
 
-/** Adresse de l'hébergement MySQL. */
+/** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', 'hl94.dinaserver.com');
 
-/** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
+/** Codificación de caracteres para la base de datos. */
 define('DB_CHARSET', 'utf8');
 
-/** Le type de collabtion de la base de données. 
-  * N'y touchez qui si vous savez ce que vous faites. 
-  */
+/** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
 
 /**#@+
- * Clefs uniques d'authentification.
+ * Claves únicas de autentificación.
  *
- * Remplacez les valeurs par défaut par des phrases uniques !
- * Vous pouvez générer des phrases aléatoires en utilisant 
- * {@link https://api.wordpress.org/secret-key/1.1/ Le service de clefs secrètes de WordPress.org}.
- * Vous pouvez modifier ces phrases à n'importe quel moment, afin d'invalider tous les cookies existants.
- * Cela forcera également tous les utilisateurs à se reconnecter.
+ * Define cada clave secreta con una frase aleatoria distinta.
+ * Puedes generarlas usando el {@link https://api.wordpress.org/secret-key/1.1/salt/ servicio de claves secretas de WordPress}
+ * Puedes cambiar las claves en cualquier momento para invalidar todas las cookies existentes. Esto forzará a todos los usuarios a volver a hacer login.
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', 'put your unique phrase here');
-define('SECURE_AUTH_KEY', 'put your unique phrase here');
-define('LOGGED_IN_KEY', 'put your unique phrase here');
-define('NONCE_KEY', 'put your unique phrase here');
+define('AUTH_KEY', 'cortafuegos'); // Cambia esto por tu frase aleatoria.
+define('SECURE_AUTH_KEY', 'volcán'); // Cambia esto por tu frase aleatoria.
+define('LOGGED_IN_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+define('NONCE_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+define('AUTH_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+define('SECURE_AUTH_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+define('LOGGED_IN_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+define('NONCE_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+
 /**#@-*/
 
 /**
- * Préfixe de base de données pour les tables de WordPress.
+ * Prefijo de la base de datos de WordPress.
  *
- * Vous pouvez installer plusieurs WordPress sur une seule base de données
- * si vous leur donnez chacune un préfixe unique. 
- * N'utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés!
+ * Cambia el prefijo si deseas instalar multiples blogs en una sola base de datos.
+ * Emplea solo números, letras y guión bajo.
  */
 $table_prefix  = 'wp_';
 
 /**
- * Langue de localisation de WordPress, par défaut en Anglais.
+ * Idioma de WordPress.
  *
- * Modifiez cette valeur pour localiser WordPress. Un fichier MO correspondant
- * au langage choisi doit être installé dans le dossier wp-content/languages.
- * Par exemple, pour mettre en place une traduction française, mettez le fichier
- * fr_FR.mo dans wp-content/languages, et réglez l'option ci-dessous à "fr_FR".
+ * Cambia lo siguiente para tener WordPress en tu idioma. El correspondiente archivo MO
+ * del lenguaje elegido debe encontrarse en wp-content/languages.
+ * Por ejemplo, instala ca_ES.mo copiándolo a wp-content/languages y define WPLANG como 'ca_ES'
+ * para traducir WordPress al catalán.
  */
-//define ('WPLANG', 'fr_FR');
-define ('WPLANG', 'es_ES');
+define('WPLANG', 'es_ES');
 
-/* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */
+/**
+ * Para desarrolladores: modo debug de WordPress.
+ *
+ * Cambia esto a true para activar la muestra de avisos durante el desarrollo.
+ * Se recomienda encarecidamente a los desarrolladores de temas y plugins que usen WP_DEBUG
+ * en sus entornos de desarrollo.
+ */
+define('WP_DEBUG', false);
 
-/** Chemin absolu vers le dossier de WordPress. */
+/* ¡Eso es todo, deja de editar! Feliz blogging */
+
+/** WordPress absolute path to the Wordpress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
-/** Réglage des variables de WordPress et de ses fichiers inclus. */
+/** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+

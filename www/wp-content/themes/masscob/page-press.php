@@ -62,7 +62,7 @@ $images = get_children( array('post_parent' => $post->ID, 'post_status' => 'inhe
 				//d($image);
 				?>
                 <div class="img_press">
-                <a href="<?php echo $img_page;?>" rel="shadowbox[sbalbum-<?php echo $post->ID?>];player=img;" title="<?php echo $img_caption?>"><img width="125" height="178" src="<?php echo $imageR['url']?>" class="attachment-thumbnail" alt="<?php echo $img_alt?>" title="<?php echo $img_caption?>"></a>
+                <a href="<?php echo $img_page;?>" rel="shadowbox[sbalbum-<?php echo $post->ID?>];player=img;maxHeight='200'" title="<?php echo $img_caption?>"><img width="125" height="178" src="<?php echo $imageR['url']?>" class="attachment-thumbnail" alt="<?php echo $img_alt?>" title="<?php echo $img_caption?>"></a>
                 <b><?php echo $img_caption;?></b>
                 </div>
                 <?php

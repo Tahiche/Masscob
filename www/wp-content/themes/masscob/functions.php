@@ -19,7 +19,7 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
-/** @ignore */
+
 function kubrick_head() {
 	$head = "<style type='text/css'>\n<!--";
 	$output = '';
@@ -38,7 +38,7 @@ function kubrick_head() {
 		echo $head . $output . $foot;
 }
 
-add_action('wp_head', 'kubrick_head');
+add_action('wp_head', 'kubrick_head'); 
 
 function kubrick_header_image() {
 	return apply_filters('kubrick_header_image', get_option('kubrick_header_image'));
@@ -456,7 +456,7 @@ function web_col( $atts, $content = null ) {
 
 }
 //add_shortcode('colonne', 'web_col'); 
-remove_shortcode('colonne');
+remove_shortcode('colonne'); 
 
 
 // this can live in /themes/mytheme/functions.php, or maybe as a dev plugin?

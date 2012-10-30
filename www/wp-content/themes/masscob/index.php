@@ -13,7 +13,7 @@ get_header(); ?>
 $(function() {
        
     $('#slideshow1').cycle({
-        delay: 3000,
+        delay: 2600,
         speed: 800
     });
     
@@ -29,6 +29,7 @@ $(function() {
 		// $T_image = array('home','home2','home','home2');
 		//$T_image = array('home3','home4','home5','home6',);
 		$T_image = array('home1','home2','home3','home4','home5');
+		shuffle($T_image);
 		?>
         
         <div id="slideshow1" class="pics" style="position: relative; height:541px ">
