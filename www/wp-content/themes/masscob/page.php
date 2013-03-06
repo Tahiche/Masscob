@@ -34,7 +34,7 @@ get_header();
 		<div class="post" id="post-<?php the_ID(); ?>">
 			
 			<?php if (get_the_ID()==2) { ?>
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sept12/history.jpg" />
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/feb13/history.jpg" />
 				<div style="float:left; width:816px; margin-top:20px;"><?php get_sidebar();?></div>
 				<?php get_sidebar(); ?>
 				</div>
@@ -44,7 +44,7 @@ get_header();
 				
 			<?php } ?>
 			<?php if (get_the_ID()==172) { ?>
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sept12/credits.jpg" />
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/feb13/credits.jpg" />
 				<?php get_sidebar(); ?>
 			<?php } ?>
 			<?php
@@ -320,16 +320,16 @@ Message :
 				 
 				/*	http://www.masscob.com/masscobv8.flv
 					http://www.masscob.com/masscobv8.flv*/
-					if (get_the_ID()!=444)
+					if (get_the_ID()!=444){
+					echo "<!--  the_content normal -->";
 						echo the_content(' ' . __('', 'kubrick') . ' ');
+					}
 					else
 						echo '<div style="float:left; width:814px;height:300px;"><center><br /><br /><br /><br /><br /><br /><br /><a style="cursor:pointer;" onclick="document.getElementById(\'video2\').style.display=\'block\'; document.getElementById(\'video\').style.display=\'block\'">play</a></center></div>';
 				
-					if(get_the_ID()==1775){
-						
+					if(get_the_ID()==1775){						
 /******************************** PARA PONER LOS VIDEOS EN ESTÁ PÁGINA EN VEZ DE EN DONDE SALEN (CODIGO EXTRAIDO DE wp-contents/themes/mascob/index.php) **************************************/
-							
-							//if(empty($_GET['inscription_newsletter']) AND empty($_GET['wpnewsletter_email'])){
+				//if(empty($_GET['inscription_newsletter']) AND empty($_GET['wpnewsletter_email'])){
 						
 						// <div id="video" style="position:absolute; z-index:10000; height:750px; width:816px; background-color:#fff; opacity:0.8; filter : alpha(opacity=80); -moz-opacity : 0.8; " onclick="this.style.display='none';document.getElementById('video2').style.display='none'">
 						
@@ -482,27 +482,27 @@ Message :
 			// cacher : echo '<a href="'.get_bloginfo('url').'/winter/" id="bb_img_winter"></a>';
 		}
                 if(get_the_ID()==2000){
-			echo '<div id="bb_separator">&nbsp;</div>';
-                        echo '<a href="'.get_bloginfo('url').'/autunm-winter-2011-12/" id="bb_img_summer2" style="background-position:bottom left;"></a>';
+			/*echo '<div id="bb_separator">&nbsp;</div>';
+                        echo '<a href="'.get_bloginfo('url').'/autunm-winter-2011-12/" id="bb_img_summer2" style="background-position:bottom left;"></a>';*/
 			// echo '<a href="'.get_bloginfo('url').'/automne-hiver-1011/" id="bb_img_summer2" style="background-position:bottom left;"></a>';
 			// cacher : echo '<a href="'.get_bloginfo('url').'/winter/" id="bb_img_winter"></a>';
 		}
                 if(get_the_ID()==2406){
 			//echo '<div id="bb_separator">&nbsp;</div>';
                         //echo '<a href="'.get_bloginfo('url').'/spring-summer-2011/" id="bb_img_summer3" style="background-position:bottom left;"></a>';
-			echo '<div id="bb_separator">&nbsp;</div>';
-                        echo '<a href="'.get_bloginfo('url').'/spring-summer-2012/" id="bb_img_summer3" style="background-position:bottom left;"></a>';
+			/*echo '<div id="bb_separator">&nbsp;</div>';
+                        echo '<a href="'.get_bloginfo('url').'/spring-summer-2012/" id="bb_img_summer3" style="background-position:bottom left;"></a>';*/
 		}
         if(get_the_ID()==2746){
 			/*echo '<div id="bb_separator">&nbsp;</div>';
                         echo '<a href="'.get_bloginfo('url').'/autunm-winter-2011-12/" id="bb_img_summer2" style="background-position:bottom left;"></a>';*/
-						echo '<div id="bb_separator">&nbsp;</div>';
-                        echo '<a href="'.get_bloginfo('url').'/autumn-winter-2012-13/" id="bb_img_summer2" style="background-position:bottom left;"></a>';
+						/*echo '<div id="bb_separator">&nbsp;</div>';
+                        echo '<a href="'.get_bloginfo('url').'/autumn-winter-2012-13/" id="bb_img_summer2" style="background-position:bottom left;"></a>';*/
 		}
 		
 		if(get_the_ID()==3058){
-			echo '<div id="bb_separator">&nbsp;</div>';
-                        echo '<a href="'.get_bloginfo('url').'/spring-summer-2012/" id="bb_img_summer3" style="background-position:bottom left;"></a>';
+		/*	echo '<div id="bb_separator">&nbsp;</div>';
+                        echo '<a href="'.get_bloginfo('url').'/spring-summer-2012/" id="bb_img_summer3" style="background-position:bottom left;"></a>';*/
 		}
 		
 		?>

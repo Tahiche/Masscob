@@ -133,7 +133,7 @@ if (ereg("Safari", $_SERVER["HTTP_USER_AGENT"])) {
 		 	<![endif]-->
 			
 			<!--[if !IE 6]>-->
-				<li style="margin-left:-40px;"><a onMouseOver="showOver('bt_history')" onMouseOut="showOut('bt_history')" href="<?php echo  get_bloginfo('url'); ?>/history/"><img id="bt_history" class="<?php if(strpos($_SERVER['REQUEST_URI'], 'history')) { echo 'selected'; $id_selected = 'bt_history';}  ?>" src="<?php bloginfo('stylesheet_directory'); ?>/images/history_<?php echo LANG; ?>.gif" /></a></li>
+				<li style="margin-left:-40px;"><a onMouseOver="showOver('bt_history')" onMouseOut="showOut('bt_history')" href="<?php echo  get_bloginfo('url'); ?>/masscob-history/"><img id="bt_history" class="<?php if(strpos($_SERVER['REQUEST_URI'], 'history')) { echo 'selected'; $id_selected = 'bt_history';}  ?>" src="<?php bloginfo('stylesheet_directory'); ?>/images/history_<?php echo LANG; ?>.gif" /></a></li>
 			<!--<![endif]-->
 			
 			<li><img src="<?php bloginfo('stylesheet_directory'); ?>/images/collections_<?php echo LANG; ?>.gif" /></li>
@@ -156,13 +156,13 @@ if (ereg("Safari", $_SERVER["HTTP_USER_AGENT"])) {
 				<?php global $post;
 				 	if($post->ID==5){
 				?>
-				<li style="margin-left:0px;"><a style="padding:0px; left:50px; margin:0px;" id="menu_summer2" href="<?php bloginfo('url'); ?>/summer/">&nbsp;</a></li> 
+				<li style="margin-left:0px;"><a style="padding:0px; left:50px; margin:0px; background: url('<?php bloginfo('stylesheet_directory'); ?>/images/spring_summer_black_1v2.gif');" id="menu_summer2" href="<?php bloginfo('url'); ?>/summer/">&nbsp;</a></li> 
 				<?php
 					}
 					else{
 				?>
 				<?php //<li style="margin-left:0px;"><a style="padding:0px; left:50px; margin:0px;" id="menu_summer2" href="<?php //  bloginfo('url'); ?><?php // /autunm-winter-2011-12/">&nbsp;</a></li> ?> 
-                                   <li style="margin-left:0px;"><a style="padding:0px; left:50px; margin:0px;" id="menu_summer2" href="<?php bloginfo('url'); ?>/autumn-winter-2012-13/">&nbsp;</a></li>
+                                   <li style="margin-left:0px;"><a style="padding:0px; left:50px; margin:0px;background: url('<?php bloginfo('stylesheet_directory'); ?>/images/spring_summer_black_1.gif');" id="menu_summer2" href="<?php bloginfo('url'); ?>/spring-summer-2013/" alt="Spring-Summer 2013" title="Spring-Summer 2013">Spring-Summer 2013</a></li>
 				<?php
 					}
 				?>

@@ -995,7 +995,8 @@ div.aligncenter {
 	background:url('./images/spring_summer_black_1v2.gif');
 		
 	padding-bottom: 1px;
-	
+	text-indent:-900px;
+	overflow: hidden;
 	/*
 	margin-left:38px;
 	margin-top:-12px;
@@ -1027,6 +1028,7 @@ background:url('./images/spring_summer_black_2.gif');
 	background:url('./images/col_summer_double.jpg');
 	background-position:top left;
 	margin-left:40px;
+	overflow:hidden;
 }
 
 #bb_img_summer2{

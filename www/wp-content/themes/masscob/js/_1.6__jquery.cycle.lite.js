@@ -2,7 +2,7 @@
  * jQuery Cycle Lite Plugin
  * http://malsup.com/jquery/cycle/lite/
  * Copyright (c) 2008-2012 M. Alsup
- * Version: 1.7 (20-FEB-2013)
+ * Version: 1.6 (02-MAY-2012)
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
@@ -11,15 +11,13 @@
 ;(function($) {
 "use strict";
 
-var ver = 'Lite-1.7';
-var msie = /MSIE/.test(navigator.userAgent);
+var ver = 'Lite-1.6';
 
 $.fn.cycle = function(options) {
     return this.each(function() {
         options = options || {};
         
-        if (this.cycleTimeout) 
-            clearTimeout(this.cycleTimeout);
+        if (this.cycleTimeout) clearTimeout(this.cycleTimeout);
 
         this.cycleTimeout = 0;
         this.cyclePause = 0;
@@ -62,8 +60,7 @@ $.fn.cycle = function(options) {
         });
         
         $(els[first]).css('opacity',1).show(); // opacity bit needed to handle reinit case
-        if (msie) 
-            els[first].style.removeAttribute('filter');
+        if ($.browser.msie) els[first].style.removeAttribute('filter');
 
         if (opts.fit && opts.width) 
             $slides.width(opts.width);
@@ -133,7 +130,7 @@ function go(els, opts, manual, fwd) {
         if (opts.before.length)
             $.each(opts.before, function(i,o) { o.apply(next, [curr, next, opts, fwd]); });
         var after = function() {
-            if (msie)
+            if ($.browser.msie)
                 this.style.removeAttribute('filter');
             $.each(opts.after, function(i,o) { o.apply(next, [curr, next, opts, fwd]); });
             queueNext(opts);

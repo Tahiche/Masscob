@@ -8,19 +8,7 @@ get_header(); ?>
 
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.cycle.lite.js"></script>
     
-    <script>
-    
-$(function() {
-       
-    $('#slideshow1').cycle({
-        delay: 2600,
-        speed: 800
-    });
-    
-});
-
-
-    </script>
+   
     
 	<div id="content" class="narrowcolumn" role="main">
 		
@@ -32,13 +20,19 @@ $(function() {
 		shuffle($T_image);
 		?>
         
-        <div id="slideshow1" class="pics" style="position: relative; height:541px ">
-           <?php foreach ($T_image as $id=>$img):
+        <div id="slideshow1" class="pics" style="position: relative; height:561px ">
+           <?php 
+		   $i=0;
+		   foreach ($T_image as $id=>$img):
+		   $i++;
 		    ?>
            
-           <img style="float:left;" src="<?php bloginfo('stylesheet_directory'); ?>/images/sept12/<?php echo $img ?>.jpg" />
+           <img style="float:left; <?php if($i>1):?>display:none;<?php endif; ?>" src="<?php bloginfo('stylesheet_directory'); ?>/images/feb13/<?php echo $img ?>.jpg" />
            
-           <?php endforeach; ?>
+           
+           <?php 
+		   
+		   endforeach; ?>
            
         </div>
         
@@ -133,10 +127,28 @@ $(function() {
 			jQuery("#submit_form_newsletter").click( function(){	
 				document.getElementById('form_newsletter').submit();
 			});
+			
+		jQuery('#slideshow1').cycle({
+        delay: 2600,
+        speed: 800
+    });
 
 		});
 		//-->
 	</script>
+    
+     <script>
+    
+/*$(function() {
+       
+    $('#slideshow1').cycle({
+        delay: 2600,
+        speed: 800
+    });
+    
+});*/
+ </script>
+ 
 	
 <?php get_sidebar(); ?>
 

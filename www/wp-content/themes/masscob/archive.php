@@ -29,7 +29,7 @@ get_header();
 		{
 			query_posts('orderby=title&order=ASC&category_name=points-of-sale&posts_per_page=100'); 
 			?>
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sept12/sales.jpg" />
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/feb13/sales.jpg" />
 			<div style="float:left; width:816px; margin-top:20px;"><?php get_sidebar();?></div>
 			<?php
 		}
@@ -37,9 +37,10 @@ get_header();
 		{
 			?>
 			<div class="listing flocont" style="margin-left:175px;">
-				<div class="intro">
-					<!-- <p><?php echo $category[0]->description; ?></p> -->
+				 <div class="intro">
+					<p><?php //echo $category[0]->description; ?></p> 
 				</div>
+                
 				<h5 id="marga_and_jacobo"><span style="font-weight: normal;"> Marga and Jacobo</span></h5>
 			</div>
 			<?php

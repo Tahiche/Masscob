@@ -43,61 +43,10 @@
 		    return sa ? s : s[0];
 		}
 		
-			jQuery(document).ready(function(){
-				
-				/*********************************************/
-				jQuery('#gallery_5 img').click(function(){
-					//alert("c la fete");
-					
-					jQuery("#sb-title").html('<a href="#" onclick="Shadowbox.close(); return false;" class="cloclose">X</a>' +  str_replace('<a href="#" onclick="Shadowbox.close(); return false;" class="cloclose">X</a>', '', jQuery("#sb-title").html()));
-					jQuery("#sb-title").attr('style','padding-right:3px; text-align:right; height:10px; padding-top:16px;' + jQuery("#sb-title").attr('style'));
-				
-				});
-				
-				/*****************************************/
-			});
-			jQuery(document).ready(function(){
-				
-				/*********************************************/
-				jQuery('#gallery_7 img').click(function(){
-					//alert("c la fete");
-					
-					jQuery("#sb-title").html('<a href="#" onclick="Shadowbox.close(); return false;" class="cloclose">X</a>' +  str_replace('<a href="#" onclick="Shadowbox.close(); return false;" class="cloclose">X</a>', '', jQuery("#sb-title").html()));
-					jQuery("#sb-title").attr('style','padding-right:3px; text-align:right; height:10px; padding-top:16px;' + jQuery("#sb-title").attr('style'));
-				
-				});
-				
-				/*****************************************/
-			});
-jQuery(document).ready(function(){
-				
-				/*********************************************/
-				jQuery('#gallery_1577 img').click(function(){
-					//alert("c la fete");
-					
-					jQuery("#sb-title").html('<a href="#" onclick="Shadowbox.close(); return false;" class="cloclose">X</a>' +  str_replace('<a href="#" onclick="Shadowbox.close(); return false;" class="cloclose">X</a>', '', jQuery("#sb-title").html()));
-					jQuery("#sb-title").attr('style','padding-right:3px; text-align:right; height:10px; padding-top:16px;' + jQuery("#sb-title").attr('style'));
-				
-				});
-				
-				/*****************************************/
-			});
-jQuery(document).ready(function(){
-				
-				/*********************************************/
-				jQuery('#gallery_2000 img').click(function(){
-					//alert("c la fete");
-					
-					jQuery("#sb-title").html('<a href="#" onclick="Shadowbox.close(); return false;" class="cloclose">X</a>' +  str_replace('<a href="#" onclick="Shadowbox.close(); return false;" class="cloclose">X</a>', '', jQuery("#sb-title").html()));
-					jQuery("#sb-title").attr('style','padding-right:3px; text-align:right; height:10px; padding-top:16px;' + jQuery("#sb-title").attr('style'));
-				
-				});
-				
-				/*****************************************/
-			});
+			
 		</script>
 <script type="text/javascript">
-document.getElementById('sb-title').innerHTML='<a class="cloclose" onclick="Shadowbox.close(); return false;" href="#">X</a>'+document.getElementById('sb-title').innerHTML
+// document.getElementById('sb-title').innerHTML='<a class="cloclose" onclick="Shadowbox.close(); return false;" href="#">X</a>'+document.getElementById('sb-title').innerHTML
 </script>
 </body>
 </html>
