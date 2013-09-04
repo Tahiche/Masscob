@@ -34,7 +34,14 @@ get_header();
 			<?php
 		}
 		else
-		{
+		{// Get the query URL used to show posts from a certain category
+                // based on the URL used by the user.
+                global $query_string;
+
+                // Show only 5 posts per page (rather than 10 by default) for anything
+                // in this category, but respect all pagination and category selection.
+                query_posts($query_string . '&posts_per_page=5');
+				// d($query_string);
 			?>
 			<div class="listing flocont" style="margin-left:175px;">
 				 <div class="intro">

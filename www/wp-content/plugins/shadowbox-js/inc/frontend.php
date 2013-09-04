@@ -287,7 +287,7 @@
 		$master_pattern = '/<a(.*?)href=([\'"])([^>]*)(\.(bmp|gif|jpe|jpe?g|png|swf|flv|f4v|dv|moo?v|movie|mp4|asf|wmv?|avi|mpe?g|mp3|aac)\\2|(youtube\.com\/(watch|v\/)|video\.google\.com\/googleplayer.swf))(.*?)>/i';
 
 		// Rel attrs for different file types
-		$img_rel_attr  = 'rel=$2shadowbox[' . $albumid . '];player=img;$2';
+		$img_rel_attr  = 'rel=$2shadowbox[' . $albumid . '];player=img$2;'; 
 		$mov_rel_attr  = 'rel=$2shadowbox[' . $albumid . '];width=' . $this->get_option ( 'genericVideoWidth' ) . ';height=' . $this->get_option ( 'genericVideoHeight' ) . ';$2';
 		$aud_rel_attr  = 'rel=$2shadowbox[' . $albumid . '];player=flv;width=500;height=0;$2';
 		$tube_rel_attr = 'rel=$2shadowbox[' . $albumid . '];player=swf;width=' . $this->get_option ( 'genericVideoWidth' ) . ';height=' . $this->get_option ( 'genericVideoHeight' ) . ';$2';
